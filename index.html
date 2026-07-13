@@ -41,7 +41,6 @@
   a.dm b{display:block;font-size:13.5px;font-weight:800}
   a.dm span{display:block;font-size:11px;color:rgba(255,255,255,.9);margin-top:1px}
 
-  /* 컨트롤 */
   .tabs{display:flex;gap:6px;margin:18px 0 0}
   .tabs button{flex:1;border:1.5px solid var(--mist);background:#fff;color:var(--muted);
     border-radius:999px;padding:8px 0;font-size:12px;font-weight:700;cursor:pointer;
@@ -61,56 +60,67 @@
     font-size:11px;font-weight:800;cursor:pointer;display:none;font-family:inherit}
   .search.has .clr{display:block}
 
-  /* 호수 칩 */
-  .chips{display:flex;gap:6px;overflow-x:auto;margin-top:10px;padding-bottom:2px;
-    scrollbar-width:none}
-  .chips::-webkit-scrollbar{display:none}
-  .chip{flex:none;border:1.5px solid var(--mist);background:#fff;color:var(--muted);
-    border-radius:999px;padding:6px 12px;font-size:11px;font-weight:700;cursor:pointer;
-    font-family:inherit;white-space:nowrap}
-  .chip.on{background:var(--deep);color:#fff;border-color:transparent}
-
   .bar{display:flex;align-items:center;justify-content:space-between;margin:18px 3px 10px}
-  .bar .n{font-size:12px;font-weight:800}
+  .bar .n{font-size:11.5px;font-weight:800}
   .bar .n em{font-style:normal;color:var(--hot)}
-  .bar .u{font-size:10.5px;color:var(--muted)}
+  .bar .u{font-size:10px;color:var(--muted)}
 
-  /* ── 상품 2열 그리드 ── */
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .p{background:#fff;border:1.5px solid var(--mist);border-radius:14px;overflow:hidden;
-    display:flex;flex-direction:column;text-decoration:none;color:var(--ink);
-    box-shadow:0 2px 9px rgba(92,42,68,.05);transition:transform .12s,box-shadow .15s}
+  /* ── 호 블럭 (최신이 위, 눌러서 아래로 펼침) ── */
+  .stack{display:flex;flex-direction:column;gap:10px}
+  .iss{background:#fff;border:1.5px solid var(--mist);border-radius:16px;overflow:hidden;
+    box-shadow:0 2px 10px rgba(92,42,68,.05);transition:box-shadow .18s,border-color .18s}
+  .iss.open{border-color:var(--soft);box-shadow:0 10px 26px rgba(240,107,160,.18)}
+
+  .hd{display:flex;align-items:center;gap:11px;padding:11px 13px;cursor:pointer}
+  .hd:active{background:#FFF6FA}
+  .hd .th{flex:none;width:46px;height:58px;border-radius:9px;object-fit:cover;
+    background:var(--mist);display:block}
+  .hd .t{flex:1;min-width:0}
+  .hd .no{font-size:10px;font-weight:900;color:var(--rose);letter-spacing:.02em}
+  .hd .tt{font-size:13.5px;font-weight:800;line-height:1.35;margin-top:2px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .hd .ss{font-size:10.5px;color:var(--muted);margin-top:3px}
+  .hd .ss b{color:var(--hot);font-weight:800}
+  .hd .cv{flex:none;width:26px;height:26px;border-radius:50%;background:#FFF0F6;
+    display:grid;place-items:center;font-size:10px;color:var(--rose);font-weight:900;
+    transition:transform .22s}
+  .iss.open .hd .cv{transform:rotate(180deg);background:var(--hot);color:#fff}
+
+  .bd{display:none;padding:2px 12px 13px}
+  .iss.open .bd{display:block;animation:drop .24s ease}
+  @keyframes drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+  /* 상품 2열 */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .p{background:#FFF9FC;border:1.5px solid var(--mist);border-radius:12px;overflow:hidden;
+    display:flex;flex-direction:column;text-decoration:none;color:var(--ink);transition:.13s}
   a.p:active{transform:scale(.975)}
-  a.p:hover{box-shadow:0 8px 22px rgba(240,107,160,.2)}
+  a.p:hover{border-color:var(--soft);box-shadow:0 6px 16px rgba(240,107,160,.16)}
   .p .im{position:relative;width:100%;aspect-ratio:1/1;background:var(--mist)}
   .p .im img{width:100%;height:100%;object-fit:cover;display:block}
-  .p .iss{position:absolute;top:6px;left:6px;padding:2.5px 6px;border-radius:999px;
-    background:rgba(255,255,255,.92);color:var(--rose);font-size:9px;font-weight:900;
-    backdrop-filter:blur(4px)}
-  .p .b{padding:9px 10px 10px;display:flex;flex-direction:column;flex:1}
-  .p .br{font-size:9.5px;font-weight:900;letter-spacing:.03em;color:var(--rose);
-    text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .p .nm{margin-top:3px;font-size:12px;font-weight:700;line-height:1.4;
-    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:34px}
-  .p .from{margin-top:7px;padding-top:7px;border-top:1px dashed var(--mist);
-    font-size:9.5px;font-weight:700;color:var(--muted);line-height:1.35;
-    display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
-  .p .from b{color:var(--rose);font-weight:900}
-  .p .cta{margin-top:8px;padding:7px 0;border-radius:9px;text-align:center;
-    font-size:11px;font-weight:800;
+  .p .nn{position:absolute;top:5px;left:5px;width:17px;height:17px;border-radius:5px;
+    background:rgba(240,107,160,.92);color:#fff;font-size:9px;font-weight:900;
+    display:grid;place-items:center}
+  .p .b{padding:8px 9px 9px;display:flex;flex-direction:column;flex:1}
+  .p .br{font-size:9px;font-weight:900;letter-spacing:.03em;color:var(--rose);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .p .nm{margin-top:3px;font-size:11.5px;font-weight:700;line-height:1.4;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:32px}
+  .p .cta{margin-top:8px;padding:6px 0;border-radius:8px;text-align:center;
+    font-size:10.5px;font-weight:800;
     background:linear-gradient(135deg,var(--hot),var(--rose));color:#fff}
-  .p.dead{cursor:default;opacity:.72}
+  .p.dead{opacity:.68;cursor:default}
   .p.dead .cta{background:#FFF0F6;color:#C9A5B6;border:1px dashed var(--mist)}
+
+  .post{display:block;margin-top:9px;padding:8px;border-radius:10px;text-align:center;
+    background:#FFF6FA;border:1.5px solid var(--mist);text-decoration:none;
+    font-size:10.5px;font-weight:700;color:var(--rose)}
 
   .empty{border:1.5px dashed var(--mist);border-radius:16px;padding:26px 16px;text-align:center;
     font-size:12.5px;line-height:1.7;color:#B08CA0;background:rgba(255,255,255,.55)}
   .empty a{color:var(--hot);font-weight:800;text-decoration:none}
 
   mark{background:rgba(240,107,160,.25);color:var(--deep);border-radius:3px;padding:0 1px;font-weight:800}
-
-  .more{display:block;margin-top:14px;padding:11px;border-radius:12px;text-align:center;
-    background:#fff;border:1.5px solid var(--mist);text-decoration:none;
-    font-size:11.5px;font-weight:700;color:var(--rose)}
 
   footer{margin-top:28px;text-align:center;font-size:10px;line-height:1.7;color:#B08CA0}
   footer .ad{display:inline-block;margin-bottom:7px;padding:5px 10px;border-radius:999px;
@@ -144,8 +154,6 @@
     <button class="clr" id="clr">✕</button>
   </div>
 
-  <div class="chips" id="chips"></div>
-
   <div class="bar">
     <div class="n" id="cnt"></div>
     <div class="u" id="upd"></div>
@@ -166,7 +174,8 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const track = (id, url) => `${TRACK}?id=${encodeURIComponent(id)}&u=${encodeURIComponent(url)}`;
 const norm = s => String(s ?? "").toLowerCase().replace(/\s+/g,"");
 
-let ITEMS = [], ISSUES = [], CAT = "all", Q = "", NO = "all";
+let ISSUES = [], CAT = "all", Q = "";
+const OPEN = new Set();   // 펼쳐진 호
 
 const hi = s => {
   const t = esc(s);
@@ -174,62 +183,83 @@ const hi = s => {
   const re = new RegExp(Q.trim().split("").map(c => c.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("\\s*"), "i");
   return t.replace(re, m => `<mark>${m}</mark>`);
 };
+const hitItems = is => (is.items||[]).filter(p => norm(p.name).includes(norm(Q)));
+const matchIssue = is => !Q || norm(is.title).includes(norm(Q)) ||
+  norm(is.no + "호").includes(norm(Q)) || hitItems(is).length > 0;
 
-function pcard(it){
-  const img = it.img
-    ? `<img src="${esc(it.img)}" alt="" loading="lazy">`
-    : (it.cover ? `<img src="${esc(it.cover)}" alt="" loading="lazy">` : "");
+function pcard(it, iss, n){
+  const img = it.img ? `<img src="${esc(it.img)}" alt="" loading="lazy">`
+            : (iss.cover ? `<img src="${esc(iss.cover)}" alt="" loading="lazy">` : "");
   const inner = `
-    <div class="im">${img}<span class="iss">${esc(it.no)}호</span></div>
+    <div class="im">${img}<span class="nn">${n}</span></div>
     <div class="b">
       <div class="br">${it.brand ? hi(it.brand) : "PICK"}</div>
       <div class="nm">${hi(it.product || it.name)}</div>
-      <div class="from">📖 <b>${esc(it.no)}호</b> · ${esc(it.issue || "")}</div>
       <div class="cta">${it.url ? "사러가기 →" : "링크 준비중"}</div>
     </div>`;
   if (!it.url) return `<div class="p dead">${inner}</div>`;
-  return `<a class="p" href="${esc(track(it.no+":"+it.name, it.url))}" target="_blank" rel="noopener nofollow sponsored">${inner}</a>`;
+  return `<a class="p" href="${esc(track(iss.no+":"+it.name, it.url))}" target="_blank" rel="noopener nofollow sponsored">${inner}</a>`;
+}
+
+function block(iss){
+  const all = iss.items || [];
+  let items = all;
+  if (Q) { const h = hitItems(iss); if (h.length) items = h; }
+  const live = all.filter(p => p.url).length;
+  const open = Q ? true : OPEN.has(iss.no);
+  const cov = iss.cover ? `<img class="th" src="${esc(iss.cover)}" alt="" loading="lazy">` : `<div class="th"></div>`;
+  const post = iss.permalink
+    ? `<a class="post" href="${esc(track(iss.no+":post", iss.permalink))}" target="_blank" rel="noopener">📷 인스타에서 이 호 보기</a>` : "";
+  const grid = items.length
+    ? `<div class="grid">${items.map(p => pcard(p, iss, String(all.indexOf(p)+1))).join("")}</div>`
+    : `<div class="empty" style="padding:16px;font-size:11.5px">상품 링크 준비 중이에요 🍒</div>`;
+
+  return `<section class="iss${open ? " open" : ""}" data-no="${esc(iss.no)}">
+    <div class="hd">
+      ${cov}
+      <div class="t">
+        <div class="no">${esc(iss.no)}호 · ${iss.cat === "beauty" ? "💄 뷰티" : "👗 패션"}</div>
+        <div class="tt">${hi(iss.title)}</div>
+        <div class="ss">아이템 <b>${all.length}</b>개${live ? " · 바로구매 " + live : ""} · ${esc(iss.date||"")}</div>
+      </div>
+      <div class="cv">▼</div>
+    </div>
+    <div class="bd">${grid}${post}</div>
+  </section>`;
 }
 
 function render(){
   const app = document.getElementById("app");
-  let rows = ITEMS.filter(i => CAT === "all" || i.cat === CAT)
-                  .filter(i => NO === "all" || i.no === NO)
-                  .filter(i => !Q || norm(i.name).includes(norm(Q)));
-  // 링크 있는 상품 먼저
-  rows = rows.slice().sort((a,b) => (b.url?1:0) - (a.url?1:0));
-
+  const rows = ISSUES.filter(i => CAT === "all" || i.cat === CAT).filter(matchIssue);
   document.getElementById("search").classList.toggle("has", !!Q);
-  const live = rows.filter(i => i.url).length;
-  document.getElementById("cnt").innerHTML =
-    rows.length ? `아이템 <em>${rows.length}</em>개${live ? ` · 바로구매 ${live}` : ""}` : "";
+
+  const nItem = rows.reduce((s,i) => s + (Q ? hitItems(i).length : (i.items||[]).length), 0);
+  document.getElementById("cnt").innerHTML = rows.length
+    ? (Q ? `“${esc(Q)}” — <em>${rows.length}</em>개 호 · 아이템 ${nItem}개`
+         : `발행 <em>${rows.length}</em>호 · 아이템 ${nItem}개`)
+    : "";
 
   if (!rows.length){
-    app.innerHTML = `<div class="empty">${Q ? `“${esc(Q)}” 결과가 없어요 🍒` : "아직 등록된 아이템이 없어요 🍒"}<br>
-      <a href="https://www.instagram.com/cherry.clubs2/" target="_blank" rel="noopener">인스타에서 새 호 보러가기 →</a></div>`;
+    app.innerHTML = `<div class="empty">${Q ? `“${esc(Q)}” 결과가 없어요 🍒` : "아직 발행된 호가 없어요 🍒"}<br>
+      <a href="https://www.instagram.com/cherry.clubs2/" target="_blank" rel="noopener">인스타 보러가기 →</a></div>`;
     return;
   }
-  app.innerHTML = `<div class="grid">${rows.map(pcard).join("")}</div>`;
+  app.innerHTML = `<div class="stack">${rows.map(block).join("")}</div>`;
 }
 
-function chips(){
-  const el = document.getElementById("chips");
-  const list = ISSUES.filter(i => CAT === "all" || i.cat === CAT);
-  el.innerHTML = `<button class="chip${NO==="all"?" on":""}" data-no="all">전체 호</button>` +
-    list.map(i => `<button class="chip${NO===i.no?" on":""}" data-no="${esc(i.no)}">${esc(i.no)}호 · ${esc(i.title.slice(0,8))}</button>`).join("");
-}
-
-document.getElementById("chips").addEventListener("click", e => {
-  const b = e.target.closest(".chip"); if (!b) return;
-  NO = b.dataset.no; chips(); render();
+document.getElementById("app").addEventListener("click", e => {
+  const hd = e.target.closest(".hd"); if (!hd) return;
+  const sec = hd.parentNode, no = sec.dataset.no;
+  sec.classList.toggle("open");
+  sec.classList.contains("open") ? OPEN.add(no) : OPEN.delete(no);
 });
 document.getElementById("tabs").addEventListener("click", e => {
   const b = e.target.closest("button"); if (!b) return;
   document.querySelectorAll("#tabs button").forEach(x => x.classList.remove("on"));
-  b.classList.add("on"); CAT = b.dataset.c; NO = "all"; chips(); render();
+  b.classList.add("on"); CAT = b.dataset.c; render();
 });
 const qEl = document.getElementById("q");
-let t=null;
+let t = null;
 qEl.addEventListener("input", () => { clearTimeout(t); t = setTimeout(() => { Q = qEl.value.trim(); render(); }, 120); });
 document.getElementById("clr").onclick = () => { qEl.value=""; Q=""; render(); qEl.focus(); };
 
@@ -237,15 +267,9 @@ fetch("links.json?v=" + Date.now())
   .then(r => r.json())
   .then(d => {
     ISSUES = (d.issues||[]).slice().sort((a,b) => String(b.no).localeCompare(String(a.no)));
-    const coverOf = Object.fromEntries(ISSUES.map(i => [i.no, i.cover]));
-    ITEMS = (d.items || []).map(i => ({...i, cover: coverOf[i.no]}));
-    if (!ITEMS.length) {  // 구버전 links.json 대비
-      ITEMS = ISSUES.flatMap(is => (is.items||[]).map((p,k) => ({
-        ...p, no:is.no, cat:is.cat, idx:k+1, cover:is.cover,
-        brand:"", product:p.name })));
-    }
+    if (ISSUES[0]) OPEN.add(ISSUES[0].no);          // 최신호는 기본 펼침
     document.getElementById("upd").textContent = d.updated ? "업데이트 " + d.updated : "";
-    chips(); render();
+    render();
   })
   .catch(() => render());
 </script>
