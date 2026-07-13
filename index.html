@@ -263,13 +263,23 @@ let t = null;
 qEl.addEventListener("input", () => { clearTimeout(t); t = setTimeout(() => { Q = qEl.value.trim(); render(); }, 120); });
 document.getElementById("clr").onclick = () => { qEl.value=""; Q=""; render(); qEl.focus(); };
 
+// DM에서 오는 딥링크:  ?no=001  또는  #001  → 해당 호만 펼치고 그 자리로 스크롤
+const DEEP = (new URLSearchParams(location.search).get("no")
+              || location.hash.replace("#","")).trim();
+
 fetch("links.json?v=" + Date.now())
   .then(r => r.json())
   .then(d => {
     ISSUES = (d.issues||[]).slice().sort((a,b) => String(b.no).localeCompare(String(a.no)));
-    if (ISSUES[0]) OPEN.add(ISSUES[0].no);          // 최신호는 기본 펼침
+    const deep = DEEP && ISSUES.find(i => i.no === DEEP);
+    if (deep) OPEN.add(deep.no);
+    else if (ISSUES[0]) OPEN.add(ISSUES[0].no);     // 기본은 최신호 펼침
     document.getElementById("upd").textContent = d.updated ? "업데이트 " + d.updated : "";
     render();
+    if (deep) {
+      const el = document.querySelector(`.iss[data-no="${deep.no}"]`);
+      if (el) setTimeout(() => el.scrollIntoView({behavior:"smooth", block:"start"}), 250);
+    }
   })
   .catch(() => render());
 </script>
