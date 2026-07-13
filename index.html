@@ -3,10 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CHERRY CLUB — 매거진</title>
-<meta name="description" content="CUTE IS THE RULE. 지금 잘 나가는 것만 골라주는 쇼핑 매거진.">
-<meta property="og:title" content="CHERRY CLUB — 매거진">
-<meta property="og:description" content="CUTE IS THE RULE. 데일리룩 · 트렌드 큐레이션">
+<title>CHERRY CLUB — SHOP</title>
+<meta name="description" content="체리클럽이 고른 것만. 바로 사러가기.">
+<meta property="og:title" content="CHERRY CLUB — SHOP">
 <meta property="og:image" content="logo.png">
 <meta name="theme-color" content="#F06BA0">
 <link rel="icon" href="logo.png">
@@ -18,133 +17,104 @@
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
   body{
     font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",system-ui,-apple-system,sans-serif;
-    background:
-      radial-gradient(1200px 600px at 50% -10%, #FBDCE8 0%, transparent 60%),
-      linear-gradient(180deg,#FFF6FA 0%,#FDEAF2 100%);
+    background:radial-gradient(1000px 500px at 50% -8%, #FBDCE8 0%, transparent 58%),
+               linear-gradient(180deg,#FFF7FB 0%,#FDEAF2 100%);
     color:var(--ink); min-height:100vh;
     display:flex; justify-content:center;
-    padding:30px 18px calc(44px + env(safe-area-inset-bottom));
+    padding:26px 16px calc(40px + env(safe-area-inset-bottom));
   }
   .wrap{width:100%;max-width:460px}
 
-  /* 헤더 */
-  header{text-align:center;margin-bottom:18px}
-  .logo{width:92px;height:92px;border-radius:50%;display:block;margin:0 auto 12px;
-    box-shadow:0 8px 28px rgba(240,107,160,.35), 0 0 0 4px #fff}
-  .handle{font-size:19px;font-weight:800;letter-spacing:-.02em}
-  .tag{margin-top:6px;font-size:11px;font-weight:800;letter-spacing:.18em;color:var(--hot)}
-  .desc{margin-top:9px;font-size:13.5px;line-height:1.55;color:var(--muted)}
-  .social{display:flex;justify-content:center;gap:9px;margin-top:13px}
-  .social a{width:38px;height:38px;border-radius:50%;background:#fff;border:1.5px solid var(--mist);
-    display:grid;place-items:center;font-size:16px;text-decoration:none;
-    box-shadow:0 2px 8px rgba(92,42,68,.06)}
+  header{text-align:center;margin-bottom:14px}
+  .logo{width:76px;height:76px;border-radius:50%;display:block;margin:0 auto 10px;
+    box-shadow:0 6px 22px rgba(240,107,160,.32), 0 0 0 3px #fff}
+  .handle{font-size:17px;font-weight:800}
+  .tag{margin-top:5px;font-size:10px;font-weight:800;letter-spacing:.18em;color:var(--hot)}
+  .desc{margin-top:8px;font-size:12.5px;line-height:1.5;color:var(--muted)}
 
-  .notice{margin-top:16px;border-radius:14px;padding:12px 14px;font-size:13px;line-height:1.5;
-    background:linear-gradient(135deg,var(--hot),var(--rose));color:#fff;
-    box-shadow:0 6px 18px rgba(240,107,160,.3)}
+  a.dm{display:flex;align-items:center;gap:11px;margin-top:14px;
+    background:linear-gradient(135deg,var(--hot),var(--rose));border-radius:15px;
+    padding:12px 15px;text-decoration:none;color:#fff;
+    box-shadow:0 7px 20px rgba(240,107,160,.36)}
+  a.dm .ic{flex:0 0 32px;height:32px;border-radius:9px;background:rgba(255,255,255,.22);
+    display:grid;place-items:center;font-size:15px}
+  a.dm b{display:block;font-size:13.5px;font-weight:800}
+  a.dm span{display:block;font-size:11px;color:rgba(255,255,255,.9);margin-top:1px}
 
-  a.dm{display:flex;align-items:center;gap:12px;margin-top:16px;
-    background:linear-gradient(135deg,var(--hot),var(--rose));border-radius:16px;
-    padding:14px 16px;text-decoration:none;color:#fff;
-    box-shadow:0 8px 22px rgba(240,107,160,.38)}
-  a.dm .ic{flex:0 0 36px;height:36px;border-radius:10px;background:rgba(255,255,255,.22);
-    display:grid;place-items:center;font-size:16px}
-  a.dm b{display:block;font-size:14.5px;font-weight:800}
-  a.dm span{display:block;font-size:11.5px;color:rgba(255,255,255,.88);margin-top:2px}
+  /* 컨트롤 */
+  .tabs{display:flex;gap:6px;margin:18px 0 0}
+  .tabs button{flex:1;border:1.5px solid var(--mist);background:#fff;color:var(--muted);
+    border-radius:999px;padding:8px 0;font-size:12px;font-weight:700;cursor:pointer;
+    font-family:inherit;transition:.15s}
+  .tabs button.on{background:linear-gradient(135deg,var(--hot),var(--rose));color:#fff;
+    border-color:transparent;box-shadow:0 4px 12px rgba(240,107,160,.3)}
 
-  /* 탭 */
-  .tabs{display:flex;gap:7px;margin:22px 0 0}
-  .tabs button{
-    flex:1;border:1.5px solid var(--mist);background:#fff;color:var(--muted);
-    border-radius:999px;padding:9px 0;font-size:12.5px;font-weight:700;cursor:pointer;
-    font-family:inherit;transition:all .15s}
-  .tabs button.on{
-    background:linear-gradient(135deg,var(--hot),var(--rose));color:#fff;border-color:transparent;
-    box-shadow:0 4px 14px rgba(240,107,160,.32)}
-
-  /* 검색 */
-  .search{position:relative;margin:11px 0 0}
-  .search input{
-    width:100%;border:1.5px solid var(--mist);background:#fff;border-radius:999px;
-    padding:11px 38px;font-size:13px;font-family:inherit;color:var(--ink);
-    box-shadow:0 2px 10px rgba(92,42,68,.05);outline:none;transition:.15s}
-  .search input:focus{border-color:var(--soft);box-shadow:0 4px 16px rgba(240,107,160,.18)}
+  .search{position:relative;margin-top:9px}
+  .search input{width:100%;border:1.5px solid var(--mist);background:#fff;border-radius:999px;
+    padding:10px 36px;font-size:12.5px;font-family:inherit;color:var(--ink);
+    box-shadow:0 2px 9px rgba(92,42,68,.05);outline:none}
+  .search input:focus{border-color:var(--soft);box-shadow:0 4px 14px rgba(240,107,160,.16)}
   .search input::placeholder{color:#C9A5B6}
-  .search .mag{position:absolute;left:14px;top:50%;transform:translateY(-50%);
-    font-size:13px;color:var(--soft);pointer-events:none}
-  .search .clr{position:absolute;right:9px;top:50%;transform:translateY(-50%);
-    width:24px;height:24px;border:none;border-radius:50%;background:var(--mist);color:var(--rose);
-    font-size:12px;font-weight:800;cursor:pointer;display:none;font-family:inherit}
+  .search .mag{position:absolute;left:13px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--soft)}
+  .search .clr{position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:22px;height:22px;border:none;border-radius:50%;background:var(--mist);color:var(--rose);
+    font-size:11px;font-weight:800;cursor:pointer;display:none;font-family:inherit}
   .search.has .clr{display:block}
-  .hits{margin:11px 4px 0;font-size:11.5px;font-weight:700;color:var(--rose)}
-  mark{background:rgba(240,107,160,.25);color:var(--deep);border-radius:3px;padding:0 2px;font-weight:800}
 
-  .sec-h{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:800;
-    letter-spacing:.04em;color:var(--ink);margin:24px 4px 11px}
-  .sec-h .bar{flex:1;height:1px;background:linear-gradient(90deg,var(--soft),transparent)}
-  .sec-h .cnt{font-size:10px;font-weight:700;color:var(--rose);
-    background:rgba(240,107,160,.12);padding:2px 7px;border-radius:999px}
+  /* 호수 칩 */
+  .chips{display:flex;gap:6px;overflow-x:auto;margin-top:10px;padding-bottom:2px;
+    scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none;border:1.5px solid var(--mist);background:#fff;color:var(--muted);
+    border-radius:999px;padding:6px 12px;font-size:11px;font-weight:700;cursor:pointer;
+    font-family:inherit;white-space:nowrap}
+  .chip.on{background:var(--deep);color:#fff;border-color:transparent}
 
-  /* ── 2열 그리드 ── */
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
-  .card{background:#fff;border:1.5px solid var(--mist);border-radius:14px;overflow:hidden;
-    cursor:pointer;box-shadow:0 2px 10px rgba(92,42,68,.06);
-    transition:transform .12s, box-shadow .15s}
-  .card:active{transform:scale(.975)}
-  .card:hover{box-shadow:0 8px 22px rgba(240,107,160,.18)}
-  .card .th{position:relative;width:100%;aspect-ratio:4/5;background:var(--mist);display:block}
-  .card .th img{width:100%;height:100%;object-fit:cover;display:block}
-  .card .badge{position:absolute;top:7px;left:7px;padding:3px 7px;border-radius:999px;
-    background:rgba(255,255,255,.92);color:var(--rose);font-size:9.5px;font-weight:900;
-    letter-spacing:.02em;backdrop-filter:blur(4px)}
-  .card .pill{position:absolute;bottom:7px;right:7px;padding:3px 7px;border-radius:999px;
-    background:rgba(240,107,160,.92);color:#fff;font-size:9.5px;font-weight:800}
-  .card .b{padding:9px 10px 11px}
-  .card .ct{font-size:12.5px;font-weight:800;line-height:1.35;letter-spacing:-.02em;
+  .bar{display:flex;align-items:center;justify-content:space-between;margin:18px 3px 10px}
+  .bar .n{font-size:12px;font-weight:800}
+  .bar .n em{font-style:normal;color:var(--hot)}
+  .bar .u{font-size:10.5px;color:var(--muted)}
+
+  /* ── 상품 2열 그리드 ── */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .p{background:#fff;border:1.5px solid var(--mist);border-radius:14px;overflow:hidden;
+    display:flex;flex-direction:column;text-decoration:none;color:var(--ink);
+    box-shadow:0 2px 9px rgba(92,42,68,.05);transition:transform .12s,box-shadow .15s}
+  a.p:active{transform:scale(.975)}
+  a.p:hover{box-shadow:0 8px 22px rgba(240,107,160,.2)}
+  .p .im{position:relative;width:100%;aspect-ratio:1/1;background:var(--mist)}
+  .p .im img{width:100%;height:100%;object-fit:cover;display:block}
+  .p .iss{position:absolute;top:6px;left:6px;padding:2.5px 6px;border-radius:999px;
+    background:rgba(255,255,255,.92);color:var(--rose);font-size:9px;font-weight:900;
+    backdrop-filter:blur(4px)}
+  .p .b{padding:9px 10px 10px;display:flex;flex-direction:column;flex:1}
+  .p .br{font-size:9.5px;font-weight:900;letter-spacing:.03em;color:var(--rose);
+    text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .p .nm{margin-top:3px;font-size:12px;font-weight:700;line-height:1.4;
     display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:34px}
-  .card .cs{margin-top:5px;font-size:10.5px;color:var(--muted)}
+  .p .from{margin-top:7px;padding-top:7px;border-top:1px dashed var(--mist);
+    font-size:9.5px;font-weight:700;color:var(--muted);line-height:1.35;
+    display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+  .p .from b{color:var(--rose);font-weight:900}
+  .p .cta{margin-top:8px;padding:7px 0;border-radius:9px;text-align:center;
+    font-size:11px;font-weight:800;
+    background:linear-gradient(135deg,var(--hot),var(--rose));color:#fff}
+  .p.dead{cursor:default;opacity:.72}
+  .p.dead .cta{background:#FFF0F6;color:#C9A5B6;border:1px dashed var(--mist)}
 
-  .empty{border:1.5px dashed var(--mist);border-radius:16px;padding:26px 16px;
-    font-size:12.5px;line-height:1.7;color:#B08CA0;background:rgba(255,255,255,.5);text-align:center}
+  .empty{border:1.5px dashed var(--mist);border-radius:16px;padding:26px 16px;text-align:center;
+    font-size:12.5px;line-height:1.7;color:#B08CA0;background:rgba(255,255,255,.55)}
+  .empty a{color:var(--hot);font-weight:800;text-decoration:none}
 
-  /* ── 시트 ── */
-  .veil{position:fixed;inset:0;background:rgba(59,18,41,.45);backdrop-filter:blur(3px);
-    opacity:0;pointer-events:none;transition:opacity .22s;z-index:20}
-  .veil.on{opacity:1;pointer-events:auto}
-  .sheet{position:fixed;left:0;right:0;bottom:0;z-index:21;
-    max-width:460px;margin:0 auto;background:#fff;
-    border-radius:22px 22px 0 0;padding:10px 16px calc(20px + env(safe-area-inset-bottom));
-    transform:translateY(102%);transition:transform .28s cubic-bezier(.2,.9,.25,1);
-    max-height:82vh;overflow-y:auto;box-shadow:0 -10px 40px rgba(92,42,68,.25)}
-  .sheet.on{transform:translateY(0)}
-  .grip{width:38px;height:4px;border-radius:99px;background:var(--mist);margin:0 auto 12px}
-  .sh-top{display:flex;gap:11px;align-items:center;padding-bottom:12px;border-bottom:1.5px dashed var(--mist)}
-  .sh-top img{flex:0 0 52px;width:52px;height:65px;border-radius:9px;object-fit:cover;background:var(--mist)}
-  .sh-meta{font-size:10.5px;font-weight:800;color:var(--rose)}
-  .sh-ttl{font-size:15px;font-weight:800;line-height:1.35;margin-top:3px}
-  .sh-sub{font-size:11px;color:var(--muted);margin-top:4px}
-  .x{margin-left:auto;width:28px;height:28px;flex:none;border:none;border-radius:50%;
-    background:#FFF6FA;color:var(--rose);font-size:13px;font-weight:800;cursor:pointer;font-family:inherit}
+  mark{background:rgba(240,107,160,.25);color:var(--deep);border-radius:3px;padding:0 1px;font-weight:800}
 
-  .prods{padding-top:12px}
-  a.prod, .prod{display:flex;align-items:center;gap:10px;padding:10px 11px;border-radius:12px;
-    text-decoration:none;color:var(--ink);background:#FFF6FA;margin-bottom:7px;
-    border:1px solid transparent}
-  a.prod:active{transform:scale(.985)}
-  .prod .n{flex:0 0 20px;height:20px;border-radius:6px;background:var(--hot);color:#fff;
-    font-size:10.5px;font-weight:800;display:grid;place-items:center}
-  .prod .pn{flex:1;font-size:12.5px;font-weight:600;line-height:1.4}
-  .prod .go{font-size:11px;font-weight:800;color:var(--hot);white-space:nowrap}
-  .prod.dead{background:#fff;border:1px dashed var(--mist);color:#B08CA0}
-  .prod.dead .n{background:var(--mist);color:var(--muted)}
-  .prod.dead .go{color:#C9A5B6}
-  a.post{display:block;text-align:center;margin-top:8px;padding:10px;border-radius:12px;
+  .more{display:block;margin-top:14px;padding:11px;border-radius:12px;text-align:center;
     background:#fff;border:1.5px solid var(--mist);text-decoration:none;
-    font-size:12px;font-weight:700;color:var(--rose)}
+    font-size:11.5px;font-weight:700;color:var(--rose)}
 
-  footer{margin-top:32px;text-align:center;font-size:10.5px;line-height:1.7;color:#B08CA0}
-  footer .ad{display:inline-block;margin-bottom:8px;padding:5px 10px;border-radius:999px;
-    background:rgba(240,107,160,.1);color:var(--rose);font-weight:700;font-size:10px}
+  footer{margin-top:28px;text-align:center;font-size:10px;line-height:1.7;color:#B08CA0}
+  footer .ad{display:inline-block;margin-bottom:7px;padding:5px 10px;border-radius:999px;
+    background:rgba(240,107,160,.1);color:var(--rose);font-weight:700}
 </style>
 </head>
 <body>
@@ -154,15 +124,12 @@
     <img class="logo" src="logo.png" alt="CHERRY CLUB">
     <div class="handle">@cherry.clubs2</div>
     <div class="tag">CUTE IS THE RULE</div>
-    <p class="desc">지금 잘 나가는 것만 골라주는 쇼핑 매거진.<br>살까 말까 하는 고민을 줄여드려요.</p>
-    <nav class="social" id="social"></nav>
+    <p class="desc">체리클럽이 고른 것만 모아뒀어요.<br>마음에 드는 건 바로 사러 가세요.</p>
   </header>
 
-  <div id="notice"></div>
-
   <a class="dm" href="https://ig.me/m/cherry.clubs2" target="_blank" rel="noopener">
-    <span class="ic">💌</span>
-    <span><b>찾는 아이템 있으세요?</b><span>DM 주시면 대신 골라드려요</span></span>
+    <span class="ic">📩</span>
+    <span><b>협찬 · 광고 · 제휴 문의</b><span>DM으로 연락 주세요</span></span>
   </a>
 
   <div class="tabs" id="tabs">
@@ -173,10 +140,16 @@
 
   <div class="search" id="search">
     <span class="mag">🔍</span>
-    <input id="q" type="search" autocomplete="off" placeholder="브랜드 · 아이템 · 호수로 찾기">
-    <button class="clr" id="clr" aria-label="지우기">✕</button>
+    <input id="q" type="search" autocomplete="off" placeholder="브랜드 · 아이템 검색">
+    <button class="clr" id="clr">✕</button>
   </div>
-  <div class="hits" id="hits"></div>
+
+  <div class="chips" id="chips"></div>
+
+  <div class="bar">
+    <div class="n" id="cnt"></div>
+    <div class="u" id="upd"></div>
+  </div>
 
   <main id="app"></main>
 
@@ -187,140 +160,92 @@
   </footer>
 </div>
 
-<div class="veil" id="veil"></div>
-<div class="sheet" id="sheet"></div>
-
 <script>
 const TRACK = "https://peppy-duck-1231.navlafilm-sys.deno.net/c";
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const track = (id, url) => `${TRACK}?id=${encodeURIComponent(id)}&u=${encodeURIComponent(url)}`;
 const norm = s => String(s ?? "").toLowerCase().replace(/\s+/g,"");
 
-let DATA = { issues: [] }, CAT = "all", Q = "";
+let ITEMS = [], ISSUES = [], CAT = "all", Q = "", NO = "all";
 
 const hi = s => {
   const t = esc(s);
-  if (!Q) return t;
-  if (!norm(s).includes(norm(Q))) return t;
+  if (!Q || !norm(s).includes(norm(Q))) return t;
   const re = new RegExp(Q.trim().split("").map(c => c.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("\\s*"), "i");
   return t.replace(re, m => `<mark>${m}</mark>`);
 };
-const matchIssue = i =>
-  !Q || norm(i.title).includes(norm(Q)) || norm(i.no+"호").includes(norm(Q)) ||
-  (i.items||[]).some(p => norm(p.name).includes(norm(Q)));
-const catLabel = c => c === "beauty" ? "💄 뷰티" : "👗 패션";
 
-function card(iss){
-  const items = iss.items || [];
-  const live  = items.filter(p => p.url).length;
-  const cover = iss.cover ? `<img src="${esc(iss.cover)}" alt="" loading="lazy">` : "";
-  const hit   = Q ? items.filter(p => norm(p.name).includes(norm(Q))).length : 0;
-  return `<article class="card" data-no="${esc(iss.no)}">
-    <div class="th">
-      ${cover}
-      <span class="badge">${esc(iss.no)}호</span>
-      <span class="pill">${hit ? "🔍 " + hit : "🛍 " + items.length}</span>
-    </div>
+function pcard(it){
+  const img = it.img
+    ? `<img src="${esc(it.img)}" alt="" loading="lazy">`
+    : (it.cover ? `<img src="${esc(it.cover)}" alt="" loading="lazy">` : "");
+  const inner = `
+    <div class="im">${img}<span class="iss">${esc(it.no)}호</span></div>
     <div class="b">
-      <div class="ct">${hi(iss.title)}</div>
-      <div class="cs">${catLabel(iss.cat)} · ${live ? "링크 " + live : "준비중"}</div>
-    </div>
-  </article>`;
+      <div class="br">${it.brand ? hi(it.brand) : "PICK"}</div>
+      <div class="nm">${hi(it.product || it.name)}</div>
+      <div class="from">📖 <b>${esc(it.no)}호</b> · ${esc(it.issue || "")}</div>
+      <div class="cta">${it.url ? "사러가기 →" : "링크 준비중"}</div>
+    </div>`;
+  if (!it.url) return `<div class="p dead">${inner}</div>`;
+  return `<a class="p" href="${esc(track(it.no+":"+it.name, it.url))}" target="_blank" rel="noopener nofollow sponsored">${inner}</a>`;
 }
-
-function prodList(iss){
-  let items = iss.items || [];
-  if (Q) {
-    const h = items.filter(p => norm(p.name).includes(norm(Q)));
-    if (h.length) items = h;
-  }
-  if (!items.length) return `<div class="empty" style="padding:14px;font-size:12px">상품 링크 준비 중이에요 🍒</div>`;
-  const base = iss.items || [];
-  return items.map(p => {
-    const n = String(base.indexOf(p)+1).padStart(2,"0");
-    if (!p.url) return `<div class="prod dead"><span class="n">${n}</span><span class="pn">${hi(p.name)}</span><span class="go">준비중</span></div>`;
-    return `<a class="prod" href="${esc(track(iss.no+":"+p.name, p.url))}" target="_blank" rel="noopener nofollow sponsored">
-      <span class="n">${n}</span><span class="pn">${hi(p.name)}</span><span class="go">보러가기 ›</span></a>`;
-  }).join("");
-}
-
-const veil = document.getElementById("veil"), sheet = document.getElementById("sheet");
-function openSheet(no){
-  const iss = (DATA.issues||[]).find(i => i.no === no);
-  if (!iss) return;
-  const items = iss.items || [];
-  const live = items.filter(p => p.url).length;
-  const post = iss.permalink
-    ? `<a class="post" href="${esc(track(iss.no+":post", iss.permalink))}" target="_blank" rel="noopener">📷 인스타에서 이 호 보기</a>` : "";
-  sheet.innerHTML = `<div class="grip"></div>
-    <div class="sh-top">
-      ${iss.cover ? `<img src="${esc(iss.cover)}" alt="">` : ""}
-      <div>
-        <div class="sh-meta">${esc(iss.no)}호 · ${catLabel(iss.cat)}</div>
-        <div class="sh-ttl">${esc(iss.title)}</div>
-        <div class="sh-sub">상품 ${items.length}${live ? " · 링크 "+live : ""} · ${esc(iss.date||"")}</div>
-      </div>
-      <button class="x" id="x">✕</button>
-    </div>
-    <div class="prods">${prodList(iss)}${post}</div>`;
-  sheet.scrollTop = 0;
-  veil.classList.add("on"); sheet.classList.add("on");
-  document.body.style.overflow = "hidden";
-  document.getElementById("x").onclick = closeSheet;
-}
-function closeSheet(){
-  veil.classList.remove("on"); sheet.classList.remove("on");
-  document.body.style.overflow = "";
-}
-veil.onclick = closeSheet;
-document.addEventListener("keydown", e => { if (e.key === "Escape") closeSheet(); });
 
 function render(){
-  const app = document.getElementById("app"), hits = document.getElementById("hits");
-  const rows = (DATA.issues||[]).filter(i => CAT === "all" || i.cat === CAT).filter(matchIssue);
+  const app = document.getElementById("app");
+  let rows = ITEMS.filter(i => CAT === "all" || i.cat === CAT)
+                  .filter(i => NO === "all" || i.no === NO)
+                  .filter(i => !Q || norm(i.name).includes(norm(Q)));
+  // 링크 있는 상품 먼저
+  rows = rows.slice().sort((a,b) => (b.url?1:0) - (a.url?1:0));
+
   document.getElementById("search").classList.toggle("has", !!Q);
+  const live = rows.filter(i => i.url).length;
+  document.getElementById("cnt").innerHTML =
+    rows.length ? `아이템 <em>${rows.length}</em>개${live ? ` · 바로구매 ${live}` : ""}` : "";
 
-  if (Q) {
-    const n = rows.reduce((s,i) => s + (i.items||[]).filter(p => norm(p.name).includes(norm(Q))).length, 0);
-    hits.textContent = rows.length ? `“${Q}” — ${rows.length}개 호${n ? ` · 아이템 ${n}개` : ""}` : "";
-    app.innerHTML = rows.length
-      ? `<div class="grid" style="margin-top:14px">${rows.map(card).join("")}</div>`
-      : `<div class="empty" style="margin-top:14px">“${esc(Q)}” 결과가 없어요 🍒<br>DM 주시면 대신 찾아드릴게요.</div>`;
+  if (!rows.length){
+    app.innerHTML = `<div class="empty">${Q ? `“${esc(Q)}” 결과가 없어요 🍒` : "아직 등록된 아이템이 없어요 🍒"}<br>
+      <a href="https://www.instagram.com/cherry.clubs2/" target="_blank" rel="noopener">인스타에서 새 호 보러가기 →</a></div>`;
     return;
   }
-
-  hits.textContent = "";
-  if (!rows.length) {
-    app.innerHTML = `<div class="empty" style="margin-top:20px">아직 발행된 호가 없어요 🍒<br>곧 올라옵니다.</div>`;
-    return;
-  }
-  app.innerHTML = `<div class="sec-h"><span>📚 발행호</span><i class="cnt">${rows.length}</i><i class="bar"></i></div>
-    <div class="grid">${rows.map(card).join("")}</div>`;
+  app.innerHTML = `<div class="grid">${rows.map(pcard).join("")}</div>`;
 }
 
-document.getElementById("app").addEventListener("click", e => {
-  const c = e.target.closest(".card");
-  if (c) openSheet(c.dataset.no);
+function chips(){
+  const el = document.getElementById("chips");
+  const list = ISSUES.filter(i => CAT === "all" || i.cat === CAT);
+  el.innerHTML = `<button class="chip${NO==="all"?" on":""}" data-no="all">전체 호</button>` +
+    list.map(i => `<button class="chip${NO===i.no?" on":""}" data-no="${esc(i.no)}">${esc(i.no)}호 · ${esc(i.title.slice(0,8))}</button>`).join("");
+}
+
+document.getElementById("chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  NO = b.dataset.no; chips(); render();
 });
 document.getElementById("tabs").addEventListener("click", e => {
   const b = e.target.closest("button"); if (!b) return;
   document.querySelectorAll("#tabs button").forEach(x => x.classList.remove("on"));
-  b.classList.add("on"); CAT = b.dataset.c; render();
+  b.classList.add("on"); CAT = b.dataset.c; NO = "all"; chips(); render();
 });
 const qEl = document.getElementById("q");
-let t = null;
+let t=null;
 qEl.addEventListener("input", () => { clearTimeout(t); t = setTimeout(() => { Q = qEl.value.trim(); render(); }, 120); });
 document.getElementById("clr").onclick = () => { qEl.value=""; Q=""; render(); qEl.focus(); };
 
 fetch("links.json?v=" + Date.now())
   .then(r => r.json())
   .then(d => {
-    DATA = d;
-    DATA.issues = (d.issues||[]).sort((a,b) => String(b.no).localeCompare(String(a.no)));
-    document.getElementById("social").innerHTML = (d.social||[]).map(s =>
-      `<a href="${esc(track('social:'+s.label, s.url))}" target="_blank" rel="noopener">${esc(s.icon)}</a>`).join("");
-    document.getElementById("notice").innerHTML = d.notice ? `<div class="notice">${esc(d.notice)}</div>` : "";
-    render();
+    ISSUES = (d.issues||[]).slice().sort((a,b) => String(b.no).localeCompare(String(a.no)));
+    const coverOf = Object.fromEntries(ISSUES.map(i => [i.no, i.cover]));
+    ITEMS = (d.items || []).map(i => ({...i, cover: coverOf[i.no]}));
+    if (!ITEMS.length) {  // 구버전 links.json 대비
+      ITEMS = ISSUES.flatMap(is => (is.items||[]).map((p,k) => ({
+        ...p, no:is.no, cat:is.cat, idx:k+1, cover:is.cover,
+        brand:"", product:p.name })));
+    }
+    document.getElementById("upd").textContent = d.updated ? "업데이트 " + d.updated : "";
+    chips(); render();
   })
   .catch(() => render());
 </script>
