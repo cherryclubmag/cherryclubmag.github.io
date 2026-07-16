@@ -101,6 +101,8 @@
   .p .nn{position:absolute;top:5px;left:5px;width:17px;height:17px;border-radius:5px;
     background:rgba(240,107,160,.92);color:#fff;font-size:9px;font-weight:900;
     display:grid;place-items:center}
+  .p .aff{position:absolute;top:5px;right:5px;padding:2px 5px;border-radius:5px;
+    background:rgba(59,18,41,.72);color:#fff;font-size:8px;font-weight:900;letter-spacing:.04em}
   .p .b{padding:8px 9px 9px;display:flex;flex-direction:column;flex:1}
   .p .br{font-size:9px;font-weight:900;letter-spacing:.03em;color:var(--rose);
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -191,15 +193,28 @@ function pcard(it, iss, n){
   const img = it.img ? `<img src="${esc(it.img)}" alt="" loading="lazy">`
             : (iss.cover ? `<img src="${esc(iss.cover)}" alt="" loading="lazy">` : "");
   const inner = `
-    <div class="im">${img}<span class="nn">${n}</span></div>
+    <div class="im">${img}<span class="nn">${n}</span>${it.aff ? '<span class="aff">AD</span>' : ""}</div>
     <div class="b">
       <div class="br">${it.brand ? hi(it.brand) : "PICK"}</div>
       <div class="nm">${hi(it.product || it.name)}</div>
       <div class="cta">${it.url ? "사러가기 →" : "링크 준비중"}</div>
     </div>`;
   if (!it.url) return `<div class="p dead">${inner}</div>`;
-  return `<a class="p" href="${esc(track(iss.no+":"+it.name, it.url))}" target="_blank" rel="noopener nofollow sponsored">${inner}</a>`;
+  // 구매버튼은 상품 URL 로 '직행'. 추적은 클릭 시 비차단 신호로만 보냄(실패해도 구매 안 깨짐).
+  return `<a class="p" href="${esc(it.url)}" data-tid="${esc(iss.no + ":" + it.name)}"
+     target="_blank" rel="noopener nofollow sponsored">${inner}</a>`;
 }
+
+// 클릭 추적(fire-and-forget): sendBeacon 이 실패해도 링크 이동엔 영향 없음
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a.p[data-tid]");
+  if (!a) return;
+  try {
+    const url = TRACK + "?id=" + encodeURIComponent(a.dataset.tid) + "&beacon=1";
+    if (navigator.sendBeacon) navigator.sendBeacon(url);
+    else fetch(url, { mode: "no-cors", keepalive: true }).catch(() => {});
+  } catch (_) { /* 추적 실패는 무시 */ }
+}, true);
 
 function block(iss){
   const all = iss.items || [];
