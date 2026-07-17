@@ -10,6 +10,89 @@
   ],
   "issues": [
     {
+      "no": "002",
+      "title": "나 체리클럽인데~ 여름 신발 픽 가져왔어 🍒",
+      "date": "2026-07-13",
+      "cat": "fashion",
+      "permalink": "https://www.instagram.com/p/Da5Lc5KnTVb/",
+      "media_id": "17956618449172319",
+      "cover": "covers/002.webp",
+      "items": [
+        {
+          "name": "누스 · 말로 스트랩 뮬",
+          "brand": "누스",
+          "product": "말로 스트랩 뮬",
+          "url": "https://www.29cm.co.kr/product/catalog/3202649",
+          "aff": false,
+          "img": "items/002/1.webp",
+          "no": "002",
+          "cat": "fashion",
+          "issue": "나 체리클럽인데~ 여름 신발 픽 가져왔어 🍒",
+          "idx": 1
+        },
+        {
+          "name": "락피쉬웨더웨어 · 글레어 스트랩 샌들 클리어 스타",
+          "brand": "락피쉬웨더웨어",
+          "product": "글레어 스트랩 샌들 클리어 스타",
+          "url": "https://www.29cm.co.kr/product/catalog/3927279",
+          "aff": false,
+          "img": "items/002/2.webp",
+          "no": "002",
+          "cat": "fashion",
+          "issue": "나 체리클럽인데~ 여름 신발 픽 가져왔어 🍒",
+          "idx": 2
+        },
+        {
+          "name": "타크트로이메 · 베일리 리본 투톤 플랫",
+          "brand": "타크트로이메",
+          "product": "베일리 리본 투톤 플랫",
+          "url": "https://www.29cm.co.kr/product/catalog/2431450",
+          "aff": false,
+          "img": "items/002/3.webp",
+          "no": "002",
+          "cat": "fashion",
+          "issue": "나 체리클럽인데~ 여름 신발 픽 가져왔어 🍒",
+          "idx": 3
+        },
+        {
+          "name": "누스 · 리앙 도트 메리제인",
+          "brand": "누스",
+          "product": "리앙 도트 메리제인",
+          "url": "https://www.29cm.co.kr/product/catalog/2759560",
+          "aff": false,
+          "img": "items/002/4.webp",
+          "no": "002",
+          "cat": "fashion",
+          "issue": "나 체리클럽인데~ 여름 신발 픽 가져왔어 🍒",
+          "idx": 4
+        },
+        {
+          "name": "에퓨레 · ROY 라운드 메리제인",
+          "brand": "에퓨레",
+          "product": "ROY 라운드 메리제인",
+          "url": "https://www.29cm.co.kr/product/catalog/3102224",
+          "aff": false,
+          "img": "items/002/5.webp",
+          "no": "002",
+          "cat": "fashion",
+          "issue": "나 체리클럽인데~ 여름 신발 픽 가져왔어 🍒",
+          "idx": 5
+        },
+        {
+          "name": "페이즈 · 메쉬 에어 스트링 플랫 블랙",
+          "brand": "페이즈",
+          "product": "메쉬 에어 스트링 플랫 블랙",
+          "url": "https://www.29cm.co.kr/product/catalog/3042399",
+          "aff": false,
+          "img": "items/002/6.webp",
+          "no": "002",
+          "cat": "fashion",
+          "issue": "나 체리클럽인데~ 여름 신발 픽 가져왔어 🍒",
+          "idx": 6
+        }
+      ]
+    },
+    {
       "no": "001",
       "title": "나 체리클럽인데~ 장마 픽 가져왔어 🍒",
       "date": "2026-07-13",
@@ -82,6 +165,78 @@
     }
   ],
   "items": [
+    {
+      "name": "누스 · 말로 스트랩 뮬",
+      "brand": "누스",
+      "product": "말로 스트랩 뮬",
+      "url": "https://www.29cm.co.kr/product/catalog/3202649",
+      "aff": false,
+      "img": "items/002/1.webp",
+      "no": "002",
+      "cat": "fashion",
+      "issue": "나 체리클럽인데~ 여름 신발 픽 가져왔어 🍒",
+      "idx": 1
+    },
+    {
+      "name": "락피쉬웨더웨어 · 글레어 스트랩 샌들 클리어 스타",
+      "brand": "락피쉬웨더웨어",
+      "product": "글레어 스트랩 샌들 클리어 스타",
+      "url": "https://www.29cm.co.kr/product/catalog/3927279",
+      "aff": false,
+      "img": "items/002/2.webp",
+      "no": "002",
+      "cat": "fashion",
+      "issue": "나 체리클럽인데~ 여름 신발 픽 가져왔어 🍒",
+      "idx": 2
+    },
+    {
+      "name": "타크트로이메 · 베일리 리본 투톤 플랫",
+      "brand": "타크트로이메",
+      "product": "베일리 리본 투톤 플랫",
+      "url": "https://www.29cm.co.kr/product/catalog/2431450",
+      "aff": false,
+      "img": "items/002/3.webp",
+      "no": "002",
+      "cat": "fashion",
+      "issue": "나 체리클럽인데~ 여름 신발 픽 가져왔어 🍒",
+      "idx": 3
+    },
+    {
+      "name": "누스 · 리앙 도트 메리제인",
+      "brand": "누스",
+      "product": "리앙 도트 메리제인",
+      "url": "https://www.29cm.co.kr/product/catalog/2759560",
+      "aff": false,
+      "img": "items/002/4.webp",
+      "no": "002",
+      "cat": "fashion",
+      "issue": "나 체리클럽인데~ 여름 신발 픽 가져왔어 🍒",
+      "idx": 4
+    },
+    {
+      "name": "에퓨레 · ROY 라운드 메리제인",
+      "brand": "에퓨레",
+      "product": "ROY 라운드 메리제인",
+      "url": "https://www.29cm.co.kr/product/catalog/3102224",
+      "aff": false,
+      "img": "items/002/5.webp",
+      "no": "002",
+      "cat": "fashion",
+      "issue": "나 체리클럽인데~ 여름 신발 픽 가져왔어 🍒",
+      "idx": 5
+    },
+    {
+      "name": "페이즈 · 메쉬 에어 스트링 플랫 블랙",
+      "brand": "페이즈",
+      "product": "메쉬 에어 스트링 플랫 블랙",
+      "url": "https://www.29cm.co.kr/product/catalog/3042399",
+      "aff": false,
+      "img": "items/002/6.webp",
+      "no": "002",
+      "cat": "fashion",
+      "issue": "나 체리클럽인데~ 여름 신발 픽 가져왔어 🍒",
+      "idx": 6
+    },
     {
       "name": "누아트스튜디오 · 천연고무 클래식 미드 숏 레인부츠",
       "brand": "누아트스튜디오",
