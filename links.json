@@ -8,6 +8,139 @@
       "url": "https://www.instagram.com/cherry.clubs2/"
     }
   ],
-  "issues": [],
-  "items": []
+  "issues": [
+    {
+      "no": "001",
+      "title": "나 체리클럽인데~ 장마 픽 가져왔어 🍒",
+      "date": "2026-07-13",
+      "cat": "fashion",
+      "permalink": "https://www.instagram.com/p/Da5KgQunRg4/",
+      "media_id": "18399400801089843",
+      "cover": "covers/001.webp",
+      "items": [
+        {
+          "name": "누아트스튜디오 · 천연고무 클래식 미드 숏 레인부츠",
+          "brand": "누아트스튜디오",
+          "product": "천연고무 클래식 미드 숏 레인부츠",
+          "url": "https://www.29cm.co.kr/product/catalog/3307019",
+          "aff": false,
+          "img": "items/001/1.webp",
+          "no": "001",
+          "cat": "fashion",
+          "issue": "나 체리클럽인데~ 장마 픽 가져왔어 🍒",
+          "idx": 1
+        },
+        {
+          "name": "엘리자베스 스튜어트 · 네트 젤리 샌들",
+          "brand": "엘리자베스 스튜어트",
+          "product": "네트 젤리 샌들",
+          "url": "https://www.29cm.co.kr/product/catalog/3990148",
+          "aff": false,
+          "img": "items/001/2.webp",
+          "no": "001",
+          "cat": "fashion",
+          "issue": "나 체리클럽인데~ 장마 픽 가져왔어 🍒",
+          "idx": 2
+        },
+        {
+          "name": "엘리자베스 스튜어트 · 썸머 웨지 쪼리 플립플랍",
+          "brand": "엘리자베스 스튜어트",
+          "product": "썸머 웨지 쪼리 플립플랍",
+          "url": "https://www.29cm.co.kr/product/catalog/3990141",
+          "aff": false,
+          "img": "items/001/3.webp",
+          "no": "001",
+          "cat": "fashion",
+          "issue": "나 체리클럽인데~ 장마 픽 가져왔어 🍒",
+          "idx": 3
+        },
+        {
+          "name": "코모레비뮤지엄 · 젤리 플래닛 라티스 플랫",
+          "brand": "코모레비뮤지엄",
+          "product": "젤리 플래닛 라티스 플랫",
+          "url": "https://www.29cm.co.kr/product/catalog/3925586",
+          "aff": false,
+          "img": "items/001/4.webp",
+          "no": "001",
+          "cat": "fashion",
+          "issue": "나 체리클럽인데~ 장마 픽 가져왔어 🍒",
+          "idx": 4
+        },
+        {
+          "name": "기라로쉬 · 헬로키티 도트 완전자동 우산",
+          "brand": "기라로쉬",
+          "product": "헬로키티 도트 완전자동 우산",
+          "url": "https://www.29cm.co.kr/product/catalog/3224499",
+          "aff": false,
+          "img": "items/001/5.webp",
+          "no": "001",
+          "cat": "fashion",
+          "issue": "나 체리클럽인데~ 장마 픽 가져왔어 🍒",
+          "idx": 5
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "name": "누아트스튜디오 · 천연고무 클래식 미드 숏 레인부츠",
+      "brand": "누아트스튜디오",
+      "product": "천연고무 클래식 미드 숏 레인부츠",
+      "url": "https://www.29cm.co.kr/product/catalog/3307019",
+      "aff": false,
+      "img": "items/001/1.webp",
+      "no": "001",
+      "cat": "fashion",
+      "issue": "나 체리클럽인데~ 장마 픽 가져왔어 🍒",
+      "idx": 1
+    },
+    {
+      "name": "엘리자베스 스튜어트 · 네트 젤리 샌들",
+      "brand": "엘리자베스 스튜어트",
+      "product": "네트 젤리 샌들",
+      "url": "https://www.29cm.co.kr/product/catalog/3990148",
+      "aff": false,
+      "img": "items/001/2.webp",
+      "no": "001",
+      "cat": "fashion",
+      "issue": "나 체리클럽인데~ 장마 픽 가져왔어 🍒",
+      "idx": 2
+    },
+    {
+      "name": "엘리자베스 스튜어트 · 썸머 웨지 쪼리 플립플랍",
+      "brand": "엘리자베스 스튜어트",
+      "product": "썸머 웨지 쪼리 플립플랍",
+      "url": "https://www.29cm.co.kr/product/catalog/3990141",
+      "aff": false,
+      "img": "items/001/3.webp",
+      "no": "001",
+      "cat": "fashion",
+      "issue": "나 체리클럽인데~ 장마 픽 가져왔어 🍒",
+      "idx": 3
+    },
+    {
+      "name": "코모레비뮤지엄 · 젤리 플래닛 라티스 플랫",
+      "brand": "코모레비뮤지엄",
+      "product": "젤리 플래닛 라티스 플랫",
+      "url": "https://www.29cm.co.kr/product/catalog/3925586",
+      "aff": false,
+      "img": "items/001/4.webp",
+      "no": "001",
+      "cat": "fashion",
+      "issue": "나 체리클럽인데~ 장마 픽 가져왔어 🍒",
+      "idx": 4
+    },
+    {
+      "name": "기라로쉬 · 헬로키티 도트 완전자동 우산",
+      "brand": "기라로쉬",
+      "product": "헬로키티 도트 완전자동 우산",
+      "url": "https://www.29cm.co.kr/product/catalog/3224499",
+      "aff": false,
+      "img": "items/001/5.webp",
+      "no": "001",
+      "cat": "fashion",
+      "issue": "나 체리클럽인데~ 장마 픽 가져왔어 🍒",
+      "idx": 5
+    }
+  ]
 }
