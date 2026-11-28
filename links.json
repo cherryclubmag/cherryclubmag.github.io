@@ -10,6 +10,89 @@
   ],
   "issues": [
     {
+      "no": "048",
+      "title": "겨울 니트",
+      "date": "2026-11-27",
+      "cat": "fashion",
+      "permalink": "https://www.instagram.com/p/DgRspHBEiEH/",
+      "media_id": "",
+      "cover": "covers/048.webp",
+      "items": [
+        {
+          "name": "어랜 · Poppy hairy knit",
+          "brand": "어랜",
+          "product": "Poppy hairy knit",
+          "url": "https://www.29cm.co.kr/products/4270673",
+          "aff": false,
+          "img": "items/048/1.webp",
+          "no": "048",
+          "cat": "fashion",
+          "issue": "겨울 니트",
+          "idx": 1
+        },
+        {
+          "name": "센토르 · Calming Knit Zip-Up",
+          "brand": "센토르",
+          "product": "Calming Knit Zip-Up",
+          "url": "https://www.29cm.co.kr/products/2835454",
+          "aff": false,
+          "img": "items/048/2.webp",
+          "no": "048",
+          "cat": "fashion",
+          "issue": "겨울 니트",
+          "idx": 2
+        },
+        {
+          "name": "어패럴아카이브 · Crayon wool cardigan",
+          "brand": "어패럴아카이브",
+          "product": "Crayon wool cardigan",
+          "url": "https://www.29cm.co.kr/products/4210809",
+          "aff": false,
+          "img": "items/048/3.webp",
+          "no": "048",
+          "cat": "fashion",
+          "issue": "겨울 니트",
+          "idx": 3
+        },
+        {
+          "name": "슬리 · Cable Knit Cardigan",
+          "brand": "슬리",
+          "product": "Cable Knit Cardigan",
+          "url": "https://www.29cm.co.kr/products/4328684",
+          "aff": false,
+          "img": "items/048/4.webp",
+          "no": "048",
+          "cat": "fashion",
+          "issue": "겨울 니트",
+          "idx": 4
+        },
+        {
+          "name": "아우어노스텔지아 · Grape Blossom Knit",
+          "brand": "아우어노스텔지아",
+          "product": "Grape Blossom Knit",
+          "url": "https://www.29cm.co.kr/products/4174242",
+          "aff": false,
+          "img": "items/048/5.webp",
+          "no": "048",
+          "cat": "fashion",
+          "issue": "겨울 니트",
+          "idx": 5
+        },
+        {
+          "name": "포 유어 아이즈 온리 · Meline Alpaca Cardigan",
+          "brand": "포 유어 아이즈 온리",
+          "product": "Meline Alpaca Cardigan",
+          "url": "https://www.29cm.co.kr/products/4368171",
+          "aff": false,
+          "img": "items/048/6.webp",
+          "no": "048",
+          "cat": "fashion",
+          "issue": "겨울 니트",
+          "idx": 6
+        }
+      ]
+    },
+    {
       "no": "047",
       "title": "다이소 겨울",
       "date": "2026-11-25",
@@ -94,6 +177,78 @@
     }
   ],
   "items": [
+    {
+      "name": "어랜 · Poppy hairy knit",
+      "brand": "어랜",
+      "product": "Poppy hairy knit",
+      "url": "https://www.29cm.co.kr/products/4270673",
+      "aff": false,
+      "img": "items/048/1.webp",
+      "no": "048",
+      "cat": "fashion",
+      "issue": "겨울 니트",
+      "idx": 1
+    },
+    {
+      "name": "센토르 · Calming Knit Zip-Up",
+      "brand": "센토르",
+      "product": "Calming Knit Zip-Up",
+      "url": "https://www.29cm.co.kr/products/2835454",
+      "aff": false,
+      "img": "items/048/2.webp",
+      "no": "048",
+      "cat": "fashion",
+      "issue": "겨울 니트",
+      "idx": 2
+    },
+    {
+      "name": "어패럴아카이브 · Crayon wool cardigan",
+      "brand": "어패럴아카이브",
+      "product": "Crayon wool cardigan",
+      "url": "https://www.29cm.co.kr/products/4210809",
+      "aff": false,
+      "img": "items/048/3.webp",
+      "no": "048",
+      "cat": "fashion",
+      "issue": "겨울 니트",
+      "idx": 3
+    },
+    {
+      "name": "슬리 · Cable Knit Cardigan",
+      "brand": "슬리",
+      "product": "Cable Knit Cardigan",
+      "url": "https://www.29cm.co.kr/products/4328684",
+      "aff": false,
+      "img": "items/048/4.webp",
+      "no": "048",
+      "cat": "fashion",
+      "issue": "겨울 니트",
+      "idx": 4
+    },
+    {
+      "name": "아우어노스텔지아 · Grape Blossom Knit",
+      "brand": "아우어노스텔지아",
+      "product": "Grape Blossom Knit",
+      "url": "https://www.29cm.co.kr/products/4174242",
+      "aff": false,
+      "img": "items/048/5.webp",
+      "no": "048",
+      "cat": "fashion",
+      "issue": "겨울 니트",
+      "idx": 5
+    },
+    {
+      "name": "포 유어 아이즈 온리 · Meline Alpaca Cardigan",
+      "brand": "포 유어 아이즈 온리",
+      "product": "Meline Alpaca Cardigan",
+      "url": "https://www.29cm.co.kr/products/4368171",
+      "aff": false,
+      "img": "items/048/6.webp",
+      "no": "048",
+      "cat": "fashion",
+      "issue": "겨울 니트",
+      "idx": 6
+    },
     {
       "name": "다이소 · 꽈배기 털 안감 수면 양말 핑크",
       "brand": "다이소",
