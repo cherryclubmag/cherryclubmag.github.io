@@ -8,6 +8,163 @@
       "url": "https://www.instagram.com/cherry.clubs2/"
     }
   ],
-  "issues": [],
-  "items": []
+  "issues": [
+    {
+      "no": "047",
+      "title": "다이소 겨울",
+      "date": "2026-11-25",
+      "cat": "fashion",
+      "permalink": "https://www.instagram.com/p/DgRmcv0EljN/",
+      "media_id": "",
+      "cover": "covers/047.webp",
+      "items": [
+        {
+          "name": "다이소 · 꽈배기 털 안감 수면 양말 핑크",
+          "brand": "다이소",
+          "product": "꽈배기 털 안감 수면 양말 핑크",
+          "url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1081533",
+          "aff": false,
+          "img": "items/047/1.webp",
+          "no": "047",
+          "cat": "fashion",
+          "issue": "다이소 겨울",
+          "idx": 1
+        },
+        {
+          "name": "다이소 · 윈터홈 봉제 귀마개 토끼",
+          "brand": "다이소",
+          "product": "윈터홈 봉제 귀마개 토끼",
+          "url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1084997",
+          "aff": false,
+          "img": "items/047/2.webp",
+          "no": "047",
+          "cat": "fashion",
+          "issue": "다이소 겨울",
+          "idx": 2
+        },
+        {
+          "name": "다이소 · 윈터홈 보들 핸드워머 민트",
+          "brand": "다이소",
+          "product": "윈터홈 보들 핸드워머 민트",
+          "url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1083334",
+          "aff": false,
+          "img": "items/047/3.webp",
+          "no": "047",
+          "cat": "fashion",
+          "issue": "다이소 겨울",
+          "idx": 3
+        },
+        {
+          "name": "다이소 · 라운드 퍼 목도리 베이지",
+          "brand": "다이소",
+          "product": "라운드 퍼 목도리 베이지",
+          "url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1080015",
+          "aff": false,
+          "img": "items/047/4.webp",
+          "no": "047",
+          "cat": "fashion",
+          "issue": "다이소 겨울",
+          "idx": 4
+        },
+        {
+          "name": "다이소 · 윈터홈 캐릭터 담요 강아지",
+          "brand": "다이소",
+          "product": "윈터홈 캐릭터 담요 강아지",
+          "url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1079654",
+          "aff": false,
+          "img": "items/047/5.webp",
+          "no": "047",
+          "cat": "fashion",
+          "issue": "다이소 겨울",
+          "idx": 5
+        },
+        {
+          "name": "다이소 · 니트 짜임 레그워머 아이보리",
+          "brand": "다이소",
+          "product": "니트 짜임 레그워머 아이보리",
+          "url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1081240",
+          "aff": false,
+          "img": "items/047/6.webp",
+          "no": "047",
+          "cat": "fashion",
+          "issue": "다이소 겨울",
+          "idx": 6
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "name": "다이소 · 꽈배기 털 안감 수면 양말 핑크",
+      "brand": "다이소",
+      "product": "꽈배기 털 안감 수면 양말 핑크",
+      "url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1081533",
+      "aff": false,
+      "img": "items/047/1.webp",
+      "no": "047",
+      "cat": "fashion",
+      "issue": "다이소 겨울",
+      "idx": 1
+    },
+    {
+      "name": "다이소 · 윈터홈 봉제 귀마개 토끼",
+      "brand": "다이소",
+      "product": "윈터홈 봉제 귀마개 토끼",
+      "url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1084997",
+      "aff": false,
+      "img": "items/047/2.webp",
+      "no": "047",
+      "cat": "fashion",
+      "issue": "다이소 겨울",
+      "idx": 2
+    },
+    {
+      "name": "다이소 · 윈터홈 보들 핸드워머 민트",
+      "brand": "다이소",
+      "product": "윈터홈 보들 핸드워머 민트",
+      "url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1083334",
+      "aff": false,
+      "img": "items/047/3.webp",
+      "no": "047",
+      "cat": "fashion",
+      "issue": "다이소 겨울",
+      "idx": 3
+    },
+    {
+      "name": "다이소 · 라운드 퍼 목도리 베이지",
+      "brand": "다이소",
+      "product": "라운드 퍼 목도리 베이지",
+      "url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1080015",
+      "aff": false,
+      "img": "items/047/4.webp",
+      "no": "047",
+      "cat": "fashion",
+      "issue": "다이소 겨울",
+      "idx": 4
+    },
+    {
+      "name": "다이소 · 윈터홈 캐릭터 담요 강아지",
+      "brand": "다이소",
+      "product": "윈터홈 캐릭터 담요 강아지",
+      "url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1079654",
+      "aff": false,
+      "img": "items/047/5.webp",
+      "no": "047",
+      "cat": "fashion",
+      "issue": "다이소 겨울",
+      "idx": 5
+    },
+    {
+      "name": "다이소 · 니트 짜임 레그워머 아이보리",
+      "brand": "다이소",
+      "product": "니트 짜임 레그워머 아이보리",
+      "url": "https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1081240",
+      "aff": false,
+      "img": "items/047/6.webp",
+      "no": "047",
+      "cat": "fashion",
+      "issue": "다이소 겨울",
+      "idx": 6
+    }
+  ]
 }
